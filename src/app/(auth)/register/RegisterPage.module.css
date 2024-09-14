@@ -1,0 +1,373 @@
+.container { 
+    width: 100vw;
+    background-color: rgba(44, 70, 53, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    overflow: auto;
+}
+
+.container1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-2); 
+}
+.form{
+    width: 80%;
+}
+
+/* Existing styles ... */
+
+/* Error message styles */
+.error {
+    background-color: #115e59(255, 0, 0, 0.1); 
+    color: rgb(150, 20, 20); 
+    border: 1px solid #042f2e; 
+    padding: 1rem;
+    margin-bottom: 1rem; 
+    border-radius: 5px;
+    text-align: center; 
+    font-weight: bold; 
+    animation: fadeIn 0.5s ease-in-out; 
+    position: relative; 
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Close button for the error message */
+  .closeButton {
+    position: absolute;
+    top: -1.2rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    color: rgb(150, 20, 20);
+  }
+  
+
+
+.heading {
+    font-size: 2rem;
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+    color: #f7fafc; 
+}
+
+.field{
+    margin-bottom: 1rem;
+}
+
+.field1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+    position: relative;
+}
+
+.inputField {
+    color: black; 
+    margin-top: 0.25rem; 
+    padding: 0.5rem; 
+    width: 100%; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 0.375rem; 
+    font-size: 0.7rem; 
+}
+
+.fileInput {
+    margin-top: 0.25rem; 
+    padding: 0.5rem; 
+    width: 100%; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 0.375rem; 
+    opacity: 0; 
+    position: absolute; 
+    top: 0; right: 0; bottom: 0; left: 0; 
+    cursor: pointer; 
+}
+
+.passwordToggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding-right: 0.5rem; 
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #4a5568; 
+}
+
+.fileDisplayContainer {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 0.375rem; 
+    color: #cbd5e1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.imagePreview {
+    margin-top: 0.5rem; 
+    max-width: 20rem; 
+    max-height: 8rem; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    height: auto;
+    width: auto;
+}
+
+.registerButton {
+    display: flex;
+    justify-content: center;
+    font-size: 0.875rem; 
+    cursor: pointer;
+    color: #f7fafc;
+    padding: 1rem; 
+    border-radius: 0.5rem; 
+    transition: all 300ms ease-in-out; 
+}
+
+.registerButton:hover {
+    color: #48bb78; 
+    background-color: #e2e8f0; 
+}
+
+.loginLink {
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+.loginLink:hover {
+    text-decoration: underline;
+}
+
+
+.googleSignInButton {
+    margin-top: 0.5rem;
+    background-image: linear-gradient(to right, #48bb78, #2f855a, #276749);
+    text-decoration: none;
+    box-shadow: 0 10px 15px -3px rgba(74, 85, 104, 0.5);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    display: block;
+    text-align: center;
+    transition: all 700ms ease-in-out;
+    width: auto;
+}
+
+.googleSignInButton:hover {
+    background-image: linear-gradient(to right, #68d391, #48bb78, #38a169);
+}
+
+.googleSignInButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(209, 213, 219, 0.5);
+}
+
+
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 70%;
+}
+
+.circle-green {
+    width: 128px;
+    height: 128px;
+    background-color: #1d4e0f; 
+    top: 60vh; 
+    left: 60vw; 
+    animation: move-randomly1 20s infinite ease-in-out;
+}
+
+.circle-blue {
+    width: 96px;
+    height: 96px;
+    background-color: #00008b; 
+    top: 70vh;
+    left: 90vw;
+    animation: move-randomly2 25s infinite ease-in-out;
+}
+
+.circle-gray {
+    width: 96px;
+    height: 96px;
+    background-color: #e0e0e0;
+    top: 20vh;
+    left: 20vw;
+    animation: move-randomly3 22s infinite ease-out;
+}
+
+.circle-yellow {
+    width: 150px;
+    height: 150px;
+    background-color: #ffd700; 
+    top: 10vh;
+    left: 30vw;
+    animation: move-randomly1 30s infinite ease-in-out reverse;
+}
+
+
+@keyframes move-randomly1 {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(5vw, -5vh); }
+    30% { transform: translate(-10vw, 15vh); }
+    50% { transform: translate(15vw, -10vh); }
+    70% { transform: translate(-20vw, 5vh); }
+    90% { transform: translate(10vw, -15vh); }
+}
+
+@keyframes move-randomly2 {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5vw, 10vh); }
+    30% { transform: translate(10vw, -20vh); }
+    50% { transform: translate(-15vw, 10vh); }
+    70% { transform: translate(20vw, -5vh); }
+    90% { transform: translate(-10vw, 20vh); }
+}
+
+@keyframes move-randomly3 {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(10vw, -5vh); }
+    30% { transform: translate(-5vw, 10vh); }
+    50% { transform: translate(5vw, -15vh); }
+    70% { transform: translate(-15vw, 15vh); }
+    90% { transform: translate(20vw, -10vh); }
+}
+
+
+
+.videoStyle {     
+    width: 100%;
+    opacity: 0.8; 
+    display: none;
+}
+
+.videoStyle1 {   
+    width: 100%;
+    opacity: 0.8;
+    display: none;
+}
+
+/* Styling for link buttons */
+.linkButton {
+    width: 100%; 
+    padding: 1rem; 
+    font-size: 1rem; 
+    font-weight: 400;
+    letter-spacing: 0.05em; 
+    text-transform: uppercase; 
+    transition: all 0.3s linear; 
+    border-radius: 20px; 
+    outline: 1px solid;
+    background: linear-gradient(to right, #264232 0%, #3c5833 100%); 
+    overflow: hidden; 
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: #ffffff62; 
+  }
+  
+  /* Pseudo-element for the button text */
+  .linkButton::before {
+    content: attr(data-text); 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 1.6rem; 
+    text-align: center; 
+    color: #FFF; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+  
+  /* Adjustments on hover */
+  .linkButton:hover::before {
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  
+  /* Pseudo-element for the hover background effect */
+  .linkButton::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, transparent 0%, #21c782 40%, transparent 70%); 
+    transform: translate(-50%, -50%) scale(0); 
+    transition: all 0.6s ease-in-out; 
+  }
+  
+  /* Background scale effect on hover */
+  .linkButton:hover::after {
+    transform: translate(-50%, -50%) scale(1); 
+  }
+  
+  /* Change text color on hover */
+  .linkButton:hover {
+    color: #FFF; 
+  }
+
+  
+
+@media (min-width: 640px) {
+    .videoContainer {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+    }
+    .container1{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .videoStyle {
+        display: block;
+    }
+}
+
+@media (min-width: 1300px) {
+    .videoStyle1 {
+        display: block;
+    }
+}
+
+
+
